@@ -5,7 +5,7 @@
     <view class='search-input'>
       <input placeholder-class='placeholder' placeholder='搜索' placeholder-style='font-size:24rpx;color:lightgray;text-align:center'></input>
     </view>
-    <template is="list" data="{{titleName:'近期上映',movies}}" />
+    <template is="list" data="{{titleName:'近期上映',movies:near_movies}}" />
     <template is="list" data="{{titleName:'热门电影'}}" />
     <template is="list" data="{{titleName:'电视剧'}}" />
     <template is="list" data="{{titleName:'综艺'}}" />

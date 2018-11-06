@@ -35,5 +35,23 @@ App({
   },
   globalData: {
     userInfo: null
-  }
+  },
+  http(server, data, callbanck, errFun){
+    var url = 'http://douban.uieee.com/v2/movie/'
+    var page = this;
+    wx.request({
+      url: url + server,
+      method: 'GET',
+      data:data,
+      header: {
+        'Content-Type': "json"
+      },
+      success: function (res) {
+        callbanck(res.data.subjects)
+      },
+      fail:function(err){
+        errFun(err)
+      }
+    })
+  },
 })

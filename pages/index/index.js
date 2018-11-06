@@ -1,10 +1,9 @@
 //index.js
 //获取应用实例
 const app = getApp()
-
 Page({
   data: {
-    movies:[],
+    near_movies:[],
     url:''
   },
   //事件处理函数
@@ -16,23 +15,16 @@ Page({
     that.loadMovie()
   },
   
-  loadMovie: function () {
-    var url ='http://douban.uieee.com/v2/movie/'
-    var page = this;
-    wx.request({
-      url: url+'coming_soon',
-      method:'GET',
-      header: {
-        'Content-Type': "json"
-      },
-      success: function (res) {
-        var subjects= res.data.subjects;
-        page.storageMovie(subjects)
-        page.setData({
-          movies:subjects
-        })
-        console.log(res);
-      }
+  loadMovie:function(){
+    var server = 'coming_soon'
+    app.http(server,{},(res)=>{
+      console.log(res)
+      this.setData({
+        near_movies:res
+      })
+    },
+    (err)=>{
+      console.log('err')
     })
   },
   storageMovie:function(subjects){
