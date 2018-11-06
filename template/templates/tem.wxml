@@ -1,0 +1,27 @@
+<!--template/templates/tem.wxml-->
+<template name='list'>
+  <view class='near-movie'>
+    <view class='title'>
+      <view class='line' style='width:8rpx;height:28rpx;background-color:#3AB245'></view>
+      <view class='title-item'>
+        <view class='title-line'>
+          <text>{{titleName}}</text>
+        </view>
+        <view class='more' style='color:#3AB245'>更多 ></view>
+      </view>
+    </view>
+    <view class='movies-content'>
+      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+        <block wx:for="{{movies}}">
+          <view class='movie-image'>
+            <image src='{{item.images.medium}}'></image>
+            <view class='movie-details'>
+             <view class='titleclass'><text>{{item.title}}</text></view>
+              <view class='start'>{{item.rating.average}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    </view>
+  </view>
+</template>

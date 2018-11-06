@@ -1,0 +1,12 @@
+<!--index.wxml-->
+<import src="../../template/templates/tem.wxml" />
+<view class='content'>
+  <scroll-view scroll-y="true">
+    <view class='search-input'>
+      <input placeholder-class='placeholder' placeholder='搜索' placeholder-style='font-size:24rpx;color:lightgray;text-align:center'></input>
+    </view>
+    <template is="list" data="{{titleName:'近期上映',movies:near_movies}}" />
+    <template is="list" data="{{titleName:'热映电影',movies:hot_movies}}" />
+    <template is="list" data="{{titleName:'电影排行',movies:top_movies}}" />
+  </scroll-view>
+</view>
