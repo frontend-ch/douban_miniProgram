@@ -6,7 +6,8 @@ Page({
     near_movies:[],
     hot_movies:[],
     top_movies: [],
-    url:''
+    url:'',
+    moviesId:''
   },
   //事件处理函数
   bindViewTap: function() {
@@ -64,4 +65,28 @@ Page({
   storageMovieDetails:function(subject){
     var title=subject.title
   },
+  detailsAction:function(e){
+    var arr='';
+    console.log(e.currentTarget.dataset.id)
+    if (e.currentTarget.dataset.id=="nearMovie"){
+      var idx = e.currentTarget.dataset.index
+      this.setData({
+        arr:this.data.near_movies[idx].id
+      })
+    } else if (e.currentTarget.dataset.id == "hotMovie"){
+      var idx = e.currentTarget.dataset.index
+      this.setData({
+        arr: this.data.hot_movies[idx].id
+      })
+    } else if (e.currentTarget.dataset.id == "bordMovie") {
+      var idx = e.currentTarget.dataset.index
+      this.setData({
+        arr: this.data.top_movies[idx].id
+      })
+    }
+    console.log(this.data.arr)
+    wx.navigateTo({
+      url: 'details/details?moviesId='+this.data.arr,
+    })
+  }
 })

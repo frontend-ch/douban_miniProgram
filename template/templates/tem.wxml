@@ -13,7 +13,7 @@
     <view class='movies-content'>
       <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
         <block wx:for="{{movies}}">
-          <view class='movie-image'>
+          <view class='movie-image' data-id='{{indexName}}' data-index='{{index}}' catchtap='detailsAction'>
             <image src='{{item.images.medium}}'></image>
             <view class='movie-details'>
              <view class='titleclass'><text>{{item.title}}</text></view>
@@ -25,3 +25,48 @@
     </view>
   </view>
 </template>
+
+<template name='actlist'>
+  <view class='near-movie'>
+    <view class='title'>
+      <view class='title-item'>
+        <view class='title-line'>
+          <text>{{titleName}}</text>
+        </view>
+      </view>
+    </view>
+      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+        <block wx:for="{{movies}}">
+          <view class='movie-image' catchtap='detailsAction'>
+            <image src='{{item.avatars.small}}'></image>
+            <view class='movie-details'>
+             <text>{{item.name}}</text>
+              <view class='start'>{{workName}}</view>
+            </view>
+          </view>
+        </block>
+      </scroll-view>
+    
+  </view>
+</template>
+
+<template name='imaglist'>
+  <view class='near-movie'>
+    <view class='title'>
+      <view class='title-item'>
+        <view class='title-line'>
+          <text>{{titleName}}</text>
+        </view>
+      </view>
+    </view>
+      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+        <block wx:for="{{movies}}">
+          <view class='movie-image1' catchtap='detailsAction'>
+            <image src='{{item.image}}'></image>
+          </view>
+        </block>
+      </scroll-view>
+    
+  </view>
+</template>
+      

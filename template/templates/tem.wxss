@@ -20,7 +20,7 @@
   flex-direction:row;
   justify-content:space-between;
   width:94%;
-  margin-left: 15rpx
+  margin-left: 40rpx
 }
 .movies-content{
   width: 100%
@@ -28,14 +28,31 @@
 .movie-image{
   display: inline-block;
   margin-right: 15rpx;
-  margin-left: 15rpx
+  margin-left: 15rpx;
 }
 .movie-image image{
   width:200rpx;
-  height:300rpx
+  height:300rpx;
+  border-radius: 8rpx
 }
 .movie-details{
   display:bock;
   flex-direction:column;
-  text-align:center;
+}
+.movie-details text{
+  display: inline-block; 
+  width: 200rpx;
+  overflow: hidden;
+  white-space:nowrap;
+  text-overflow: ellipsis; 
+}
+.movie-image1{
+  display: inline-block;
+  margin-left: 15rpx;
+  width: 300rpx;
+  height: 200rpx
+}
+.movie-image1 image{
+  width: 300rpx;
+  height: 200rpx
 }

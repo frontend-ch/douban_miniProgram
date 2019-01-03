@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/test/test",
-    "template/templates/tem"
+    "template/templates/tem",
+    "pages/index/details/details"
   ],
   "window":{
     "backgroundTextStyle":"light",

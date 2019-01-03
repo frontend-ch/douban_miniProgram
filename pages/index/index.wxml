@@ -5,8 +5,8 @@
     <view class='search-input'>
       <input placeholder-class='placeholder' placeholder='搜索' placeholder-style='font-size:24rpx;color:lightgray;text-align:center'></input>
     </view>
-    <template is="list" data="{{titleName:'近期上映',movies:near_movies}}" />
-    <template is="list" data="{{titleName:'热映电影',movies:hot_movies}}" />
-    <template is="list" data="{{titleName:'电影排行',movies:top_movies}}" />
+    <template is="list" data="{{titleName:'近期上映',movies:near_movies,indexName:'nearMovie'}}" />
+    <template is="list" data="{{titleName:'热映电影',movies:hot_movies,indexName:'hotMovie'}}" />
+    <template is="list" data="{{titleName:'电影排行',movies:top_movies,indexName:'bordMovie'}}" />
   </scroll-view>
 </view>

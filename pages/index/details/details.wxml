@@ -1,0 +1,62 @@
+<import src="../../../template/templates/tem.wxml" />
+<view class='content'>
+  <scroll-view class='bg_color' scroll-y='true'>
+    <view class='movie_header'>
+      <view class='movie_image'>
+        <image class='imageclass' src="{{movies.images.medium}}" />
+      </view>
+      <view class='text_content'>
+        <view class='movie_title'>{{movies.title}}</view>
+        <view class='movie_title_inenglish'>{{movies.original_title}}</view>
+        <view class='movie_intruduce'>{{movies.genres}}/{{movies.countries}}/{{movies.mainland_pubdate}}/{{movies.pubdates}}</view>
+      </view>
+    </view>
+    <view class='button'>
+      <view class='Btn'>
+        <button class='btn1'>想看</button>
+        <button class='btn2'>看过</button>
+      </view>
+    </view>
+    <view class='scoreclass'>
+      <view class='header_title'>
+        <text class='text_title'>豆瓣评分™</text>
+      </view>
+      <view class='score_content'>
+        <view class='score_num'>{{movies.rating.average}}</view>
+        <view class='start_score'></view>
+      </view>
+    </view>
+    <view class='summaryclass'>
+      <view class='summary_title'>
+        <text>简介</text>
+      </view>
+      <view class='{{showTotalBtn ? "summary_content" : "summary_content1"}}'>{{movies.summary}}</view>
+      <view class='btn' bindtap='showAll'>{{typeName}}</view>
+    </view>
+    <template is="actlist" data="{{titleName:'影人',movies:actorArr}}" />
+    <template is="imaglist" data="{{titleName:'预告片/剧照',movies:imageArr}}" />
+    <view class='pingjia'>
+      <view class='title_bord'>
+        <view class='tpjitle'>短评</view>
+        <view class='more'>全部{{movies.comments_count}}></view>
+      </view>
+      <view class='pj_content' wx:for="{{movies.popular_comments}}">
+        <view class='visitor'>
+          <view class='visitor_photo'>
+            <image src='{{item.author.avatar}}'></image>
+          </view>
+          
+          <view class='visitor_details'>
+            <view class='visitor_name'>{{item.author.name}}</view>
+            <view class='visitor_score'>{{item.rating.value}} {{item.created_at}}</view>
+          </view>
+          </view>
+          <view class='content_details'>
+            <text>{{item.content}}</text>
+          </view>
+          <view class='dianzan_num'>{{item.useful_count}}</view>
+        
+      </view>
+    </view>
+  </scroll-view>
+</view>
