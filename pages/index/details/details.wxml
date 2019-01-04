@@ -45,17 +45,20 @@
           <view class='visitor_photo'>
             <image src='{{item.author.avatar}}'></image>
           </view>
-          
+
           <view class='visitor_details'>
             <view class='visitor_name'>{{item.author.name}}</view>
             <view class='visitor_score'>{{item.rating.value}} {{item.created_at}}</view>
           </view>
-          </view>
-          <view class='content_details'>
-            <text>{{item.content}}</text>
-          </view>
-          <view class='dianzan_num'>{{item.useful_count}}</view>
-        
+        </view>
+        <view class='content_details'>
+          <text>{{item.content}}</text>
+        </view>
+        <view class='dianzan_num'>{{item.useful_count}}</view>
+      </view>
+      <view class='alllabel'>
+      <view class='pj_label'>查看全部短评</view>
+      <view class='tip_label'>></view>
       </view>
     </view>
   </scroll-view>
