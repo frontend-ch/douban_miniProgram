@@ -20,7 +20,7 @@
   flex-direction:row;
   justify-content:space-between;
   width:94%;
-  margin-left: 15rpx
+  margin-left: 40rpx
 }
 .movies-content{
   width: 100%

@@ -7,16 +7,18 @@
         <view class='title-line'>
           <text>{{titleName}}</text>
         </view>
-        <view class='more' style='color:#3AB245'>更多 ></view>
+        <view class='more' style='color:#3AB245;margin-right:20rpx'>更多 ></view>
       </view>
     </view>
     <view class='movies-content'>
       <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
         <block wx:for="{{movies}}">
           <view class='movie-image'>
-            <image src='{{item.images.medium}}'catchtap='detailsAction' data-id='{{indexName}}' data-index='{{index}}'></image>
+            <image src='{{item.images.medium}}' catchtap='detailsAction' data-id='{{indexName}}' data-index='{{index}}'></image>
             <view class='movie-details'>
-             <view class='titleclass'><text>{{item.title}}</text></view>
+              <view class='titleclass'>
+                <text>{{item.title}}</text>
+              </view>
               <view class='start'>{{item.rating.average}}</view>
             </view>
           </view>
@@ -35,18 +37,18 @@
         </view>
       </view>
     </view>
-      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
-        <block wx:for="{{movies}}">
-          <view class='movie-image' catchtap='detailsAction'>
-            <image src='{{item.avatars.small}}'></image>
-            <view class='movie-details'>
-             <text>{{item.name}}</text>
-              <view class='start'>{{workName}}</view>
-            </view>
+    <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+      <block wx:for="{{movies}}">
+        <view class='movie-image' catchtap='detailsAction'>
+          <image src='{{item.avatars.small}}'></image>
+          <view class='movie-details'>
+            <text>{{item.name}}</text>
+            <view class='start'>{{workName}}</view>
           </view>
-        </block>
-      </scroll-view>
-    
+        </view>
+      </block>
+    </scroll-view>
+
   </view>
 </template>
 
@@ -59,15 +61,13 @@
         </view>
       </view>
     </view>
-      <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+    <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
       <video src='{{item.blooper_urls[0]}}' style='height:300rpx;width:400rpx;margin-left:40rpx'></video>
-        <block wx:for="{{movies}}">
-          <!-- <view class='movie-image1' catchtap='detailsAction'> -->
-            <image class='img' src='{{item.image}}'></image>
-          <!-- </view> -->
-        </block>
-      </scroll-view>
-    
+      <block wx:for="{{movies}}">
+        <!-- <view class='movie-image1' catchtap='detailsAction'> -->
+        <image class='img' src='{{item.image}}'></image>
+        <!-- </view> -->
+      </block>
+    </scroll-view>
   </view>
 </template>
-      

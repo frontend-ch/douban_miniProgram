@@ -57,9 +57,18 @@
         <view class='dianzan_num'>{{item.useful_count}}</view>
       </view>
       <view class='alllabel'>
-      <view class='pj_label'>查看全部短评</view>
-      <view class='tip_label'>></view>
+        <view class='pj_label'>查看全部短评</view>
+        <view class='tip_label'>></view>
       </view>
+    </view>
+    <view class='title_header'>影评<text>111</text></view>
+    <view class='movie_eval_label' wx:for='{{movies.popular_reviews}}'>
+    <view class='header'>
+    <image src='{{item.author.avatar}}'></image>
+    <text>{{item.author.name}}看过</text>
+    </view>
+    <view class='title_movies'>{{item.title}}</view>
+    <view class='content_movies'>{{item.summary}}</view>
     </view>
   </scroll-view>
 </view>
