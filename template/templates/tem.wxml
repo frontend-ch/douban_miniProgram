@@ -14,7 +14,7 @@
       <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
         <block wx:for="{{movies}}">
           <view class='movie-image'>
-            <image src='{{item.images.medium}}'></image>
+            <image src='{{item.images.medium}}'catchtap='detailsAction' data-id='{{indexName}}' data-index='{{index}}'></image>
             <view class='movie-details'>
              <view class='titleclass'><text>{{item.title}}</text></view>
               <view class='start'>{{item.rating.average}}</view>
@@ -51,7 +51,7 @@
 </template>
 
 <template name='imaglist'>
-  <view class='near-movie'>
+  <view class='near-movie' style='height:450rpx'>
     <view class='title'>
       <view class='title-item'>
         <view class='title-line'>
@@ -60,10 +60,11 @@
       </view>
     </view>
       <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
+      <video src='{{item.blooper_urls[0]}}' style='height:300rpx;width:400rpx;margin-left:40rpx'></video>
         <block wx:for="{{movies}}">
-          <view class='movie-image1' catchtap='detailsAction'>
-            <image src='{{item.image}}'></image>
-          </view>
+          <!-- <view class='movie-image1' catchtap='detailsAction'> -->
+            <image class='img' src='{{item.image}}'></image>
+          <!-- </view> -->
         </block>
       </scroll-view>
     

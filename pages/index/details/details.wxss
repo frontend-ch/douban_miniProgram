@@ -146,6 +146,9 @@ width:670rpx;
 margin:40rpx auto;
 background-color:white;
 border-radius:8rpx;
+align-items:center;
+display:flex;
+flex-direction:column;
 }
 .title_bord{
 height:80rpx;
@@ -155,6 +158,7 @@ justify-content:space-between;
 margin-left:20rpx;
 margin-right:20rpx;
 align-items:center;
+width:625rpx;
 }
 .tpjitle{
 font-size:34rpx;
@@ -168,7 +172,8 @@ color:gray;
 .pj_content{
 display:flex;
 flex-direction:column;
-
+border-bottom:1px solid lightgray;
+width:625rpx;
 }
 .visitor{
 height:100rpx;
@@ -221,4 +226,20 @@ font-size:24rpx;
 color:lightgray;
 margin-bottom:20rpx;
 
+}
+.alllabel{
+height:80rpx;
+display:flex;
+flex-direction:row;
+justify-content:space-between;
+align-items:center;
+width: 625rpx
+}
+.pj_label{
+font-size:30rpx;
+font-weight:700;
+}
+.tip_label{
+font-size:30rpx;
+font-weight:700;
 }

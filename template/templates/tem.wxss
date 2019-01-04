@@ -27,7 +27,7 @@
 }
 .movie-image{
   display: inline-block;
-  margin-left: 15rpx;
+  margin-left: 40rpx;
 }
 .movie-image image{
   width:200rpx;
@@ -49,13 +49,9 @@
   white-space:nowrap;
   text-overflow: ellipsis; 
 }
-.movie-image1{
+.img{
   display: inline-block;
+  width: 400rpx;
+  height: 300rpx;
   margin-left: 15rpx;
-  width: 300rpx;
-  height: 200rpx
-}
-.movie-image1 image{
-  width: 300rpx;
-  height: 200rpx;
 }
