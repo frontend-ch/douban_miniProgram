@@ -10,16 +10,16 @@ Page({
     that.loadMovie()
   },
   loadMovie: function () {
-    var url = 'http://douban.uieee.com/v2/movie/subject/30410968'
+    var url = 'http://douban.uieee.com/v2/movie/'
     var page = this;
     wx.request({
-      url: url,
+      url: url + '',
       method: 'GET',
       header: {
         'Content-Type': "json"
       },
       success: function (res) {
-        var subjects = res.data;
+        var subjects = res.data.subjects;
         // page.storageMovie(subjects)
         page.setData({
           movies: subjects

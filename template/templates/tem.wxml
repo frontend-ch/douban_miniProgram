@@ -13,7 +13,7 @@
     <view class='movies-content'>
       <scroll-view scroll-x="true" style=" white-space: nowrap; display: flex">
         <block wx:for="{{movies}}">
-          <view class='movie-image' data-id='{{indexName}}' data-index='{{index}}' catchtap='detailsAction'>
+          <view class='movie-image'>
             <image src='{{item.images.medium}}'></image>
             <view class='movie-details'>
              <view class='titleclass'><text>{{item.title}}</text></view>
