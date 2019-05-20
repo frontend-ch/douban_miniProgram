@@ -1,4 +1,5 @@
 /* template/templates/tem.wxss */
+@import "startTem/start.wxss";
 .near-movie{
   display: flex;
   flex-direction: column;

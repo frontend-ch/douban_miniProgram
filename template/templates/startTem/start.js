@@ -1,28 +1,28 @@
-// template/templates/tem.js
+// template/templates/startTem/start.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-
+    scoreArr: [0, 0, 0, 0, 0],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    var that=this;
+    that.scoreRender();
   },
 
   /**
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-    this.selectComponent("#star");
-    this.selectComponent("#star").scoreRender();
+
   },
- 
+
   /**
    * 生命周期函数--监听页面显示
    */
@@ -63,5 +63,17 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  scoreRender: function () {
+    var scoreArr = [0, 0, 0, 0, 0]
+    var scoreInt = Math.floor(this.data.score);
+    var scoreDec = this.data.score - scoreInt;
+    for (var i = 0; i < scoreInt; i++) {
+      scoreArr[i] = 1;
+    }
+    scoreArr[scoreInt] = scoreDec;
+    this.setData({
+      scoreArr: scoreArr
+    })
   }
 })

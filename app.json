@@ -4,13 +4,14 @@
     "pages/logs/logs",
     "pages/test/test",
     "template/templates/tem",
-    "pages/index/details/details"
+    "pages/index/details/details",
+    "template/templates/startTem/start"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#3AB245",
     "navigationBarTitleText": "豆瓣评分",
-    "navigationBarTextStyle":"#fff"
+    "navigationBarTextStyle":"black"
   },
   "tabBar": {
     "color": "#a9b7b7",

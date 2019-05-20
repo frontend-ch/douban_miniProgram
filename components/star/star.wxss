@@ -1,0 +1,35 @@
+/* components/star/star.wxss */
+/* components/score/score.wxss */
+.score-out{
+  display: flex;
+}
+
+.score-bar{
+  height: 30rpx;
+  width: 30rpx;
+  margin-right: 6rpx;
+  position: relative;
+}
+
+.score-bar-in{
+  margin-left: 2rpx;
+  background: #FFC136;
+  height: 30rpx;
+  width: 26rpx;
+  transform-origin: 0;
+  /* position: relative; */
+  /* z-index: -2; */
+}
+
+.score-bar-color{
+  background: #ffffff;
+}
+
+.score-star{
+  height: 30rpx;
+  width: 30rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* z-index: -1; */
+}

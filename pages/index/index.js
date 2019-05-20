@@ -22,6 +22,7 @@ Page({
   
   loadMovie:function(){
     var server = 'coming_soon'
+    // var server ='us_box'
     app.http(server,{},(res)=>{
       console.log(res)
       this.setData({

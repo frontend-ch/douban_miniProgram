@@ -1,4 +1,5 @@
 <!--template/templates/tem.wxml-->
+<import src="startTem/start.wxml" />
 <template name='list'>
   <view class='near-movie'>
     <view class='title'>
@@ -19,7 +20,9 @@
               <view class='titleclass'>
                 <text>{{item.title}}</text>
               </view>
-              <view class='start'>{{item.rating.average}}</view>
+              <view class='start'>
+              <star id='star' score='4.5'></star>
+              </view>
             </view>
           </view>
         </block>

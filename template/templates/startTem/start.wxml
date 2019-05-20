@@ -1,0 +1,12 @@
+<!--template/templates/startTem/start.wxml-->
+<template name='start_score'>
+<view class='startclass' style='display:flex;flex-direction:row'>
+<block wx:for='{{scoreArr}}' wx:for-index="index" wx:for-item="item" wx:key='{{index}}'>
+    <view class='score-bar' id='{{"score"+index}}'>
+      <view class='score-bar-in {{whitecolor==0?"":"score-bar-color"}}' style='{{"transform:scaleX("+item+");"}}'></view>
+      <image id='{{"star"+index}}' style='width:25rpx;height:25rpx' src='../../../images/Star_super_line.png' class='score-star'></image>
+    </view>
+  </block>
+     {{average}}
+      </view>
+</template>

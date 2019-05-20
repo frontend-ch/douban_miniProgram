@@ -1,0 +1,30 @@
+template/templates/startTem/start.wxss
+.startclass{
+  display:flex;
+  flex-direction:row;
+}
+.score-bar{
+  height: 30rpx;
+  width: 30rpx;
+  position: relative;
+}
+
+.score-bar-in{
+  margin-left: 2rpx;
+  background: #FFC136;
+  height: 30rpx;
+  width: 26rpx;
+  transform-origin: 0;
+}
+
+.score-bar-color{
+  background: #ffffff;
+}
+
+.score-star{
+  height: 30rpx;
+  width: 30rpx;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
