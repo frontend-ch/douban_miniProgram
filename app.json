@@ -24,11 +24,11 @@
       },
       {
         "pagePath": "pages/logs/logs",
-        "text": "日志"
+        "text": "页面2"
       },
       {
         "pagePath": "pages/test/test",
-        "text": "测试"
+        "text": "页面3"
       }
     ]
   }
